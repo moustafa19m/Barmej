@@ -182,7 +182,7 @@ $(document).ready(function() {
 				  	 id="prev"
 					  class="btn btn-back btn-lg">Previous Week</a>
 					  <a href="${introToWebApps[currIndex - 1].nextWeek}" id="prev"
-					  class="btn btn-fwd btn-lg" style="float:right">Rank Course</a>
+					  class="btn btn-fwd btn-lg" style="float:right">Back to Dashboard</a>
 					  <br><br>`);
 	  } else {
 		  $("#contentHolder").append(`<br>
