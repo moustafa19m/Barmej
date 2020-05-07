@@ -41,12 +41,11 @@ public final class Main {
     OptionParser parser = new OptionParser();
     parser.accepts("populate");
     OptionSet options = parser.parse(args);
-
+    Database.makeTables();
     if (options.has("populate")) {
       PopulateCourseTable p = new PopulateCourseTable();
       p.addCoursesToDB();
     }
-    Database.makeTables();
     ParentHandler gui = new ParentHandler();
     gui.runSparkServer();
 
