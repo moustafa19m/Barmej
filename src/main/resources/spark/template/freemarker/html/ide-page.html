@@ -1,0 +1,356 @@
+<!doctype html>
+  <html>
+    <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <!-- <link rel="stylesheet" href="../css/index.css">
+      <link rel="stylesheet" href="../css/search.css"> -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <link rel=stylesheet href="../plugin/codemirror-5.52.2/doc/docs.css">
+      <link  rel="stylesheet" href="../css/index.css">
+      <link rel="stylesheet" href="../plugin/codemirror-5.52.2/addon/hint/show-hint.css">
+      <link href="../plugin/codemirror-5.52.2/lib/codemirror.css" type="text/css" rel="stylesheet" />
+      <link href="../plugin/codemirror-5.52.2/theme/neat.css" type="text/css" rel="stylesheet" />
+      <link href="../plugin/codemirror-5.52.2/theme/idea.css" type="text/css" rel="stylesheet" />
+      <link href="../plugin/codemirror-5.52.2/theme/eclipse.css" type="text/css" rel="stylesheet" />
+      <link href="../plugin/codemirror-5.52.2/theme/neo.css" type="text/css" rel="stylesheet" />
+      <link href="../plugin/codemirror-5.52.2/theme/dracula.css" type="text/css" rel="stylesheet" />
+      <link href="../plugin/codemirror-5.52.2/theme/material-palenight.css" type="text/css" rel="stylesheet" />
+      <link href="../plugin/codemirror-5.52.2/theme/shadowfox.css" type="text/css" rel="stylesheet" />
+      <link href="../plugin/codemirror-5.52.2/theme/cobalt.css" type="text/css" rel="stylesheet" />
+      <link href="../plugin/codemirror-5.52.2/addon/dialog/dialog.css" type="text/css" rel="stylesheet" />
+      <script src="../plugin/codemirror-5.52.2/lib/codemirror.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/edit/closebrackets.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/dialog/dialog.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/scroll/annotatescrollbar.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/search/matchesonscrollbar.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/search/searchcursor.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/search/match-highlighter.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/search/search.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/search/searchcursor.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/selection/active-line.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/edit/matchbrackets.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/hint/anyword-hint.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/hint/show-hint.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/hint/xml-hint.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/hint/html-hint.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/hint/show-hint.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/hint/javascript-hint.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/edit/closetag.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/xml/xml.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/javascript/javascript.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/css/css.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/htmlmixed/htmlmixed.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/javascript/javascript.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/python/python.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/go/go.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/javascript/javascript.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/markdown/markdown.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/clike/clike.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/htmlmixed/htmlmixed.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/go/go.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/python/python.js"></script>
+      <!-- <script src="../js/ide.js"></script> -->
+      <link href="../plugin/codemirror-5.52.2/lib/codemirror.css" type="text/css" rel="stylesheet" />
+      <link href="../plugin/codemirror-5.52.2/theme/neat.css" type="text/css" rel="stylesheet" />
+      <link href="../plugin/codemirror-5.52.2/theme/idea.css" type="text/css" rel="stylesheet" />
+      <link href="../plugin/codemirror-5.52.2/theme/eclipse.css" type="text/css" rel="stylesheet" />
+      <link href="../plugin/codemirror-5.52.2/theme/neo.css" type="text/css" rel="stylesheet" />
+      <link href="../plugin/codemirror-5.52.2/theme/dracula.css" type="text/css" rel="stylesheet" />
+      <link href="../plugin/codemirror-5.52.2/theme/material-palenight.css" type="text/css" rel="stylesheet" />
+      <link href="../plugin/codemirror-5.52.2/theme/shadowfox.css" type="text/css" rel="stylesheet" />
+      <link href="../plugin/codemirror-5.52.2/theme/cobalt.css" type="text/css" rel="stylesheet" />
+      <link href="../plugin/codemirror-5.52.2/addon/dialog/dialog.css" type="text/css" rel="stylesheet" />
+      <script src="../plugin/codemirror-5.52.2/lib/codemirror.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/edit/closebrackets.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/dialog/dialog.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/scroll/annotatescrollbar.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/search/matchesonscrollbar.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/search/searchcursor.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/search/match-highlighter.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/search/search.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/search/searchcursor.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/selection/active-line.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/edit/matchbrackets.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/hint/anyword-hint.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/hint/show-hint.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/hint/xml-hint.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/hint/html-hint.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/hint/show-hint.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/hint/javascript-hint.js"></script>
+      <script src="../plugin/codemirror-5.52.2/addon/edit/closetag.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/xml/xml.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/javascript/javascript.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/css/css.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/htmlmixed/htmlmixed.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/javascript/javascript.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/python/python.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/go/go.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/javascript/javascript.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/markdown/markdown.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/clike/clike.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/htmlmixed/htmlmixed.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/go/go.js"></script>
+      <script src="../plugin/codemirror-5.52.2/mode/python/python.js"></script>
+
+         <style>
+      .CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}
+      .CodeMirror-focused .cm-matchhighlight {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFklEQVQI12NgYGBgkKzc8x9CMDAwAAAmhwSbidEoSQAAAABJRU5ErkJggg==);
+        background-position: bottom;
+        background-repeat: repeat-x;
+      }
+      .cm-matchhighlight {background-color: lightgreen}
+      .CodeMirror-selection-highlight-scrollbar {background-color: green}
+    </style>
+
+    </head>
+
+    <body>
+
+      <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #0081ba;">
+        <div class="container">
+          <a href="#" class="navbar-brand"><img  src="../images/barmej-icon.png"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse " style="width: 100%" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" >
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+              <a class="btn btn-light" href="/logOut">Sign Out</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="row">
+          <div id="ideContentHolder" class="col-lg-5">
+            <div class="pb-2 mt-4 mb-2 border-bottom">
+              <h2>Problem Description</h2>
+            </div>
+            <div id="probDesc" class="overflow-auto" style="height: 76vh;">
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="pb-2 mt-4 mb-2 border-bottom">
+              <h2>IDE</h2>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container">
+
+                <div class="collapse navbar-collapse " style="width: 100%" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto" >
+                    <li class="nav-item ">
+                      <select id="language" class="nav-link" required>
+                        <option value="" disabled>Language</option>
+						<option selected="true" value="javascript"
+							id="JAVASCRIPT_NODE">Javascript</option>
+						<option value="python" id="PYTHON">Python</option>
+					    <option value="clike" id="C">C</option>
+						<option value="go" id="GO">Go</option>
+						<option value="clike" id="SCALA">Scala</option>
+                      </select>
+                    </li>
+                    <li class="nav-item ">
+                    <!-- <select onchange="selectTheme()" id=select> -->
+                      <select onchange="selectTheme()" id="theme" class="nav-link" required>
+                        <option value="" disabled >Theme</option>
+                        <option selected value="idea">Idea</option>
+                        <option value="eclipse">Eclipse</option>
+                        <option value="neo">Neo</option>
+                        <option value="dracula">Dracula</option>
+                        <option value="shadowfox">Shadowfox</option>
+                        <option value="material-palenight">Material-Palenight</option>
+                        <option value="cobalt">Cobalt</option>
+                      </select>
+                    </li>
+
+                    <li class="nav-item ">
+                      <select onchange="setIndentation()" id="indent" class="nav-link"  required>
+                        <option value="" disabled>Indent</option>
+                        <option value="2">Indent: 2</option>
+                        <option selected value="4">Indent: 4</option>
+                        <option value="6">Indent: 6</option>
+                        <option value="8">Indent: 8</option>
+                      </select>
+                    </li>
+                  </ul>
+                  <div class="form-inline my-2 my-lg-0">
+                    <button onclick="setMode()" class="btn btn-info">Apply Language</button>
+                  </div>
+                </div>
+              </div>
+            </nav>
+            <!-- class="codemirror-textarea" -->
+            <textarea id="code" name="code"></textarea>
+                <script>
+                let jsObj = 0;
+                $(document).ready(function() {
+                	$.getJSON(`/problem/json/${problemID}`, function(json){
+
+                		jsObj = JSON.parse(json);
+                    console.log(json);
+                    $("#probDesc").append("<h3>" + jsObj.title + "</h3>" + jsObj.text);
+
+                	})
+                });
+
+         	var input = document.getElementById("theme");
+            function selectTheme() {
+                var theme = input.options[input.selectedIndex].value;
+                editor.setOption("theme", theme);
+                location.hash = "#" + theme;
+            }
+
+            var language = document.getElementById("language");
+            var selectedLang = language.options[language.selectedIndex].value;
+            var selectedLanguage = language.options[language.selectedIndex].id;
+
+            function setMode() {
+            	editor.setOption("mode", $("#language").children("option:selected").val());
+            	selectedLanguage = language.options[language.selectedIndex].id;
+            }
+
+            var indentation = document.getElementById("indent");
+             var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+            	  styleActiveLine: true,
+                  matchBrackets: true,
+            	  lineNumbers: true,
+            	  autoCloseBrackets: true,
+            	  lineWrapping: true,
+            	  smartIndent: true,
+            	  autofocus: true,
+            	  spellcheck: true,
+            	  viewportMargin: 20,
+            	  autoCloseTags: true,
+            	  dragDrop: true,
+            	  mode: selectedLang,
+                  value: document.documentElement.innerHTML,
+                  extraKeys: {"Cmd-F": "find"}
+            	  /* highlightSelectionMatches: {showToken: /\w/, annotateScrollbar: true} */
+            	});
+
+             var choice = (location.hash && location.hash.slice(1)) ||
+             (document.location.search &&
+             decodeURIComponent(document.location.search.slice(1)));
+             if (choice) {
+                 input.value = choice;
+                 editor.setOption("theme", choice);
+             }
+             CodeMirror.on(window, "hashchange", function() {
+                 var theme = location.hash.slice(1);
+                 if (theme) {
+                     input.value = theme;
+                     selectTheme();
+                 }
+             });
+
+
+             function compileCode() {
+            	 $("#output").empty();
+            	 console.log(selectedLanguage);
+             editor.save();
+            const textArea = editor.getTextArea();
+             var input = textArea.value;
+            console.log(input);
+            const outputBox = $("#output");
+            const postParameters = {
+            	      'client_secret': '7be9fa3f457a064d0c870b9f41477afd76fded08',
+            	      'async': 0,
+            	      'source': input,
+            	      'lang': selectedLanguage,
+            	      'time_limit': 5,
+            	      'memory_limit': 262144,
+            	    };
+
+            //https://api.hackerearth.com/code/run/
+            https://api.hackerearth.com/v3/code/run/
+            	    $.post("https://api.hackerearth.com/v3/code/run/", postParameters, response => {
+
+            	    	console.log("aaaaaaaa");
+
+            	    	for (key in response) {
+            	    		if (response[key] instanceof Object) {
+            	    			for (nestedKey in response[key]) {
+            	    				if ((nestedKey === "status_detail") && (response.run_status.output == undefined)) {
+            	    				console.log(nestedKey + ":" + response[key][nestedKey]);
+            	    				outputBox.append(`<p id="status_detail" style="color:red"></p>`);
+            	    				$("#status_detail").append(response[key][nestedKey]);
+            	    				}
+            	    			}
+            	    		} else {
+            	    			if ((key === "compile_status") && (response.run_status.output == undefined)) {
+            	    				outputBox.append(`<p id="compile_status" style="color:red"></p>`);
+            	    				$("#compile_status").append(response[key]);
+            	    				outputBox.append(`<br>`);
+            	    			}
+            	    			console.log(key + ":" + response[key]);
+            	    		}
+            	    	}
+
+            	    	 //console.log(response.run_status.output);
+
+            	    	 outputBox.append("json " + jsObj[0].test.output);
+            	    	 outputBox.append("realOutput " + response.run_status.output);
+            	    	 //jsonObj[0].test.output.toString() == response.run_status.output.toString()
+            	    	 console.log(jsObj[0].test.output);
+            	    	 console.log(response.run_status.output);
+
+            	    	 if (jsObj[0].test.output.valueOf().trim() == response.run_status.output.toString().trim()) {
+            	    		 console.log("kanza");
+            	    	 const splitOutput = response.run_status.output.split("\n");
+            	    	 outputBox.append(`<p id="status_detailss" style="color:green"></p>`);
+            	    	 for (let i = 0; i < splitOutput.length; i++) {
+            	    		 $("#status_detailss").append(splitOutput[i]);
+            	    		 $("#status_detailss").append(`<br>`);
+            	    	 }
+            	    	 $("#status_detailss").append(`<p style="color:green">CORRECT! You can now move on to the next week, or finish the course!</p>`);
+            	    	 } else {
+            	    		 console.log("bs");
+            	    		 const splitOutput = response.run_status.output.split("\n");
+                	    	 outputBox.append(`<p id="status_detail" style="color:red"></p>`);
+                	    	 for (let i = 0; i < splitOutput.length; i++) {
+                	    		 $("#status_detail").append(splitOutput[i]);
+                	    		 $("#status_detail").append(`<br>`);
+                	    	 }
+                	    	 $("#status_detail").append(`<p style="color:red">This output looks incorrect, please try again!</p>`);
+            	    	 }
+            	    	//console.log(response.message);
+            	    	//console.log(response.errors);
+            	    	const output = response.run_status.output;
+            	    	const message = response.message;
+            	    	const errors = response.errors;
+            	    	//outputBox.append(output);
+            	    	outputBox.append(message);
+            	    	outputBox.append(errors);
+
+            	    });
+             }
+            	</script>
+            	<br>
+            <!-- <button href="#" class="btn btn-lg btn-success">Run Tests</button> -->
+           <a id="submit" onclick="compileCode()" href="#"
+					class="btn btn-fwd" style="float: right; color: white">Run
+					Tests</a> <a href="/student/${problemID}"
+					class="btn btn-back" style="color: white">Back to Week 1</a> <br>
+            <br>
+            <div class=" rounded-sm" style="border: 6px solid #ededed;
+border-radius: 7px;" >
+
+              <div class="" style="height: 25vh">
+                <h6 style="color: grey">Output...</h6>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+    <text id="problemID" hidden>${problemID}</text>
+</html>

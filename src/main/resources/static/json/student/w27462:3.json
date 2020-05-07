@@ -1,0 +1,11 @@
+[
+	{
+		"title": "Computation in Python",
+		"week": "Week 3",
+		"text": "Using python, write a program to calculate the area of a triangle whose three sides measure 5, 6 and 7 units respectively. Your code should print the following output: 'The area of the triangle is ?', with the double representing the area your program calculates in place of the question mark holder.",
+		"test": {
+			"code": "This is the code the student should have typed in",
+			"output": "The area of the triangle is 14.70"
+		}
+	}
+]

@@ -1,0 +1,299 @@
+<!doctype html>
+  <html>
+    <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <!-- <link rel="stylesheet" href="../../../../static/css/index.css">
+      <link rel="stylesheet" href="../../../../static/css/search.css"> -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="../js/browse-courses.js"></script>
+      <link  rel="stylesheet" href="../css/index.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+
+
+      <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #0081ba;">
+        <div class="container">
+          <a href="#" class="navbar-brand"><img  src="../images/barmej-icon.png"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" >
+              <li class="nav-item active">
+                <a class="nav-link" href="#" >Course Recommender<span class="sr-only">(current)</span> </a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/admin">Dashboard </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/studentList">Students</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/adminList">Admins</a>
+              </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+              <a class="btn btn-light" href="/logOut">Sign Out</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="pb-2 mt-4 mb-2 border-bottom" style="color: grey">
+          <h1 style="color: black">Get Course Recommendations for Your Institution</h1>
+          <!-- <i>Track: educational institution</i> -->
+        </div>
+
+        <div class="container col-lg-10">
+
+        <p>To help us better aid you in searching for courses, please rate how important
+        the following features are to you on a scale from 0 to 5. Leave a field blank if you
+        do not want that category to be accounted for.</p>
+        <br>
+        <div class="container">
+        <p><span><b> 1) Math-Heaviness:</b></span> how math-intensive you want the course to be.</p>
+       <div class="slidecontainer text-center">
+     <input type="range" min="0" max="5" value="0" class="slider" id="myRange1">
+     <br>
+       <p class="text-center" style="font-size:20px; color:#889095">Math:
+       <span id="math" style="color:black"></span></p>
+         </div>
+         </div>
+         <br>
+          <div class="container">
+          <p><span><b> 2) Creativity:</b></span> how much a course promotes and relies on creativity.</p>
+                  <div class="slidecontainer text-center">
+     <input type="range" min="0" max="5" value="0" class="slider" id="myRange2">
+     <br>
+       <p style="font-size:20px; color:#889095">Creativity:
+       <span id="creativity" style="color:black"></span></p>
+         </div>
+         </div>
+         <br>
+          <div class="container">
+         <p><span><b> 3) Advanced:</b></span> how much prior knowledge the course requires, and/or
+        how rigorous the course is.</p>
+        <div class="slidecontainer text-center">
+     <input type="range" min="0" max="5" value="0" class="slider" id="myRange3">
+     <br>
+       <p style="font-size:20px; color:#889095">How advanced is the course?
+        <span id="advanced" style="color:black"></span></p>
+         </div>
+         </div>
+         <br>
+         <div class="container">
+          <p><span><b> 4) Theoretical:</b></span> how grounded the course is in theory.</p>
+        <div class="slidecontainer text-center">
+     <input type="range" min="0" max="5" value="0" class="slider" id="myRange4">
+     <br>
+       <p style="font-size:20px; color:#889095">How theoretical is the course?
+       <span id="theory" style="color:black"></span></p>
+         </div>
+         </div>
+           <br>
+         <div class="container">
+         <p><span><b> 5) Practical:</b></span> how directly applicable the skills of the course are
+        to real-world scenarios. Note: A lower score is not necessarily a negative
+        as some courses aim to give students a grounding in the foundations of
+        computer science in order to better prepare them for future course work or assignments.</p>
+         <div class="slidecontainer text-center">
+     <input type="range" min="0" max="5" value="0" class="slider" id="myRange5">
+     <br>
+       <p style="font-size:20px; color:#889095">How practical is the course?
+       <span id="practical" style="color:black"></span></p>
+         </div>
+         </div>
+           <br>
+         <div class="container">
+         <p><span><b> 6) Problem Solving:</b></span> how much a course promotes/relies on problem solving skills.</p>
+            <div class="slidecontainer text-center">
+     <input type="range" min="0" max="5" value="0" class="slider" id="myRange6">
+     <br>
+       <p style="font-size:20px; color:#889095">Problem solving:
+       <span id="problem" style="color:black"></span></p>
+         </div>
+         </div>
+         <br>
+         <div class="container">
+            <label for="numToFind"><b>Enter here the number of courses
+         you want recommended to you (maximum allowable is 20): </b></label><br>
+         </div>
+         <div class="container"  style="text-align:center; font-size:22px">
+          <input type="number" name="numToFind" id="numToFind" min="0" max="20" value="0" required>
+         </div>
+           <div class="pb-2 mt-4 mb-2 border-bottom" style="color: grey">
+          <button onclick="rando()" class="btn btn-lg findCButton" style="float:right">Find Courses for Me</button>
+          <br>
+          <br>
+          <br>
+        </div>
+        <br>
+        <br>
+
+          <!-- <div class="col-lg-4">
+            <input class="form-group" type="text" name="" value="" placeholder="Search for keyword">
+            <button type="button" class="btn btn-primary btn-sm">
+            search
+            </button>
+          </div>
+          <div class=" row col-lg-8">
+            <strong>Filter by: </strong>
+            <div class="col-lg-5">
+              <select class="form-control" id="oSize" required>
+                <option value="" disabled selected>Level</option>
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+              </select>
+            </div>
+            <div class="col-lg-5">
+              <select class="form-control" id="oSize" required>
+                <option value="" disabled selected>Skill</option>
+                <option>Python</option>
+                <option>Javascript</option>
+                <option>HTML</option>
+              </select>
+            </div>
+          </div> -->
+
+        </div>
+
+        <div id="courseHolder" class="container">
+
+          <!-- <div class="row" style="background-color: #ededed; margin-bottom: 3%" >
+            <div class="col-lg-4" >
+              <img src="../images/security.png" alt="" style="height: 200px;">
+            </div>
+            <div class="col-lg-8">
+              <h3>Intro to Web Dev</h3>
+              <div class="container row">
+                <a class="btn btn-primary btn-sm" style="margin-right: 5%; color: white"> Advanced</a>
+                <a class="btn btn-primary btn-sm" style="margin-right: 5%; color: white"> 10th-11Grade</a>
+                <a class="btn btn-primary btn-sm" style="margin-right: 5%; color: white"> Design</a>
+                <p>As a graduate student from Stanford university, Stever has received a lot of  Diam volutpat commodo sed egestas egestas. Maecenas pharetra convallis posuere morbi. Bibendum enim facilisis gravida neque convallis a cras semper.</p>
+                <a class="btn btn-info btn-sm" style="margin-right: 5%; color: white" href="/course/courseID"> Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="background-color: #ededed; margin-bottom: 3%" >
+            <div class="col-lg-4" >
+              <img src="../images/security.png" alt="" style="height: 200px;">
+            </div>
+            <div class="col-lg-8">
+              <h3>Intro to Web Dev</h3>
+              <div class="container row">
+                <a class="btn btn-primary btn-sm" style="margin-right: 5%; color: white"> Advanced</a>
+                <a class="btn btn-primary btn-sm" style="margin-right: 5%; color: white"> 10th-11Grade</a>
+                <a class="btn btn-primary btn-sm" style="margin-right: 5%; color: white"> Design</a>
+                <p>As a graduate student from Stanford university, Stever has received a lot of  Diam volutpat commodo sed egestas egestas. Maecenas pharetra convallis posuere morbi. Bibendum enim facilisis gravida neque convallis a cras semper.</p>
+                <a class="btn btn-info btn-sm" style="margin-right: 5%; color: white"> Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="background-color: #ededed; margin-bottom: 3%" >
+            <div class="col-lg-4" >
+              <img src="../images/security.png" alt="" style="height: 200px;">
+            </div>
+            <div class="col-lg-8">
+              <h3>Intro to Web Dev</h3>
+              <div class="container row">
+                <a class="btn btn-primary btn-sm" style="margin-right: 5%; color: white"> Advanced</a>
+                <a class="btn btn-primary btn-sm" style="margin-right: 5%; color: white"> 10th-11Grade</a>
+                <a class="btn btn-primary btn-sm" style="margin-right: 5%; color: white"> Design</a>
+                <p>As a graduate student from Stanford university, Stever has received a lot of  Diam volutpat commodo sed egestas egestas. Maecenas pharetra convallis posuere morbi. Bibendum enim facilisis gravida neque convallis a cras semper.</p>
+                <a class="btn btn-info btn-sm" style="margin-right: 5%; color: white"> Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="background-color: #ededed; margin-bottom: 3%" >
+            <div class="col-lg-4" >
+              <img src="../images/security.png" alt="" style="height: 200px;">
+            </div>
+            <div class="col-lg-8">
+              <h3>Intro to Web Dev</h3>
+              <div class="container row">
+                <a class="btn btn-primary btn-sm" style="margin-right: 5%; color: white"> Advanced</a>
+                <a class="btn btn-primary btn-sm" style="margin-right: 5%; color: white"> 10th-11Grade</a>
+                <a class="btn btn-primary btn-sm" style="margin-right: 5%; color: white"> Design</a>
+                <p>As a graduate student from Stanford university, Stever has received a lot of  Diam volutpat commodo sed egestas egestas. Maecenas pharetra convallis posuere morbi. Bibendum enim facilisis gravida neque convallis a cras semper.</p>
+                <a class="btn btn-info btn-sm" style="margin-right: 5%; color: white"> Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="background-color: #ededed; margin-bottom: 3%" >
+            <div class="col-lg-4" >
+              <img src="../images/security.png" alt="" style="height: 200px;">
+            </div>
+            <div class="col-lg-8">
+              <h3>Intro to Web Dev</h3>
+              <div class="container row">
+                <a class="btn btn-primary btn-sm" style="margin-right: 5%; color: white"> Advanced</a>
+                <a class="btn btn-primary btn-sm" style="margin-right: 5%; color: white"> 10th-11Grade</a>
+                <a class="btn btn-primary btn-sm" style="margin-right: 5%; color: white"> Design</a>
+                <p>As a graduate student from Stanford university, Stever has received a lot of  Diam volutpat commodo sed egestas egestas. Maecenas pharetra convallis posuere morbi. Bibendum enim facilisis gravida neque convallis a cras semper.</p>
+                <a class="btn btn-info btn-sm" style="margin-right: 5%; color: white"> Learn More</a>
+              </div>
+            </div>
+          </div>
+ -->
+
+<script>
+var slider1 = document.getElementById("myRange1");
+var mathOutput = document.getElementById("math");
+mathOutput.innerHTML = slider1.value;
+slider1.oninput = function() {
+mathOutput.innerHTML = this.value;
+}
+
+var slider2 = document.getElementById("myRange2");
+var creativityOutput = document.getElementById("creativity");
+creativityOutput.innerHTML = slider2.value;
+slider2.oninput = function() {
+	creativityOutput.innerHTML = this.value;
+}
+
+
+var slider3 = document.getElementById("myRange3");
+var advOutput = document.getElementById("advanced");
+advOutput.innerHTML = slider3.value;
+slider3.oninput = function() {
+	advOutput.innerHTML = this.value;
+}
+
+var slider4 = document.getElementById("myRange4");
+var theoryOutput = document.getElementById("theory");
+theoryOutput.innerHTML = slider4.value;
+slider4.oninput = function() {
+	theoryOutput.innerHTML = this.value;
+}
+
+var slider5 = document.getElementById("myRange5");
+var practicalOutput = document.getElementById("practical");
+practicalOutput.innerHTML = slider5.value;
+slider5.oninput = function() {
+	practicalOutput.innerHTML = this.value;
+}
+
+var slider6 = document.getElementById("myRange6");
+var problemOutput = document.getElementById("problem");
+problemOutput.innerHTML = slider6.value;
+slider6.oninput = function() {
+	problemOutput.innerHTML = this.value;
+}</script>
+
+
+
+        </div>
+
+      </div>
+
+    </body>
+  </html>

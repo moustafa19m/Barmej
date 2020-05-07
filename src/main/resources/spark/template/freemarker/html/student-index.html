@@ -1,0 +1,105 @@
+<!doctype html>
+  <html>
+    <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <!-- <link rel="stylesheet" href="../../../../static/css/index.css">
+      <link rel="stylesheet" href="../../../../static/css/search.css"> -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <link  rel="stylesheet" href="../css/index.css">
+      <script src="../js/student-index.js"></script>
+    </head>
+
+     <body>
+
+
+      <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #0081ba;">
+        <div class="container">
+          <a href="#" class="navbar-brand"><img  src="../images/barmej-icon.png"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" >
+              <li class="nav-item active">
+                <a class="nav-link" href="#">My Courses <span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+              <a class="btn btn-light" href="/logOut">Sign Out</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="container row">
+
+        <div class="col-lg-8">
+            <div class="pb-2 mt-4 mb-2 border-bottom">
+              <h1>My Dashboard</h1>
+            </div>
+            <br>
+            <div id="enrolledCourses" class="row">
+              <div class="col-lg-6" style="margin-bottom: 3%">
+                <div class="conatiner col-lg-12" >
+                  <img src="../images/html.png" style="height: 150px; width: 100%;">
+                  <br>
+                  <div class="container" style=" border: 2px solid #5a5a5d;
+  border-radius: 0px 0px 30px 30px;">
+                    <h5>Intro to Web Development</h5>
+                    <br>
+                    <div class="text-center">
+                      <a class="img col-lg-5 btn-sm btn-primary" href="/student/w27462:1">Go to Course</a>
+                    </div>
+                    <br>
+                    <div class="progress" style="height:15px">
+  <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" aria-valuenow="70"
+  aria-valuemin="0" aria-valuemax="100" style="width:70%">
+    <span class="sr-only">70% Complete</span>
+  </div>
+</div>
+<br>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+            </div>
+          </div>
+
+          <div class="container col-lg-4">
+           <div class="container col-lg-12">
+            <div style="margin-top: 5%; margin-left:12%; border: 2px solid #A8A8A8; border-radius: 11px;">
+              <div class="conatiner col-lg-10">
+              <div class="pb-2 mt-4 mb-2 border-bottom">
+              <h5 style="color: grey">Reminders</h5>
+            </div>
+                <p>Assignment for Web Apps due soon! &#128560;</p>
+                <p>Remember to submit your security assignment tonight! </p>
+              </div>
+
+            </div>
+          </div>
+
+               <div class="container col-lg-12">
+            <div style="margin-top: 5%; margin-left:12%; border: 2px solid #A8A8A8; border-radius: 11px;">
+              <div class="conatiner col-lg-10">
+              <div class="pb-2 mt-4 mb-2 border-bottom">
+              <h5 style="color: grey">Notifications</h5>
+            </div>
+                <p>You have been assigned a new course &#129321;</p>
+                <p>Web Apps week 2 almost complete, keep up the good work! &#128522; </p>
+
+          </div>
+          </div>
+          </div>
+          </div>
+
+
+        </div>
+        </div>
+      </body>
