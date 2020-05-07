@@ -9,6 +9,7 @@ function getEnrolledCourses() {
 		res = res.data;
 		console.log(res);
 		for (let i = 0; i < res.length; i++) {
+			console.log(res[i].cImgUrl);
 			$("#enrolledCourses").append(`
 				<br>
 				<div id=${res[i].cID} class="col-lg-6" style="margin-bottom: 3%">

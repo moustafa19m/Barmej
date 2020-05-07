@@ -12,6 +12,7 @@ function getPurchasedCourses() {
     console.log(res);
     res = res.data;
     for(let i = 0; i < res.length; i++ ){
+    	console.log(res[i].cImgUrl);
       $("#coursesHolder").append(`<div id=${res[i].cID} class="col-lg-6" style="margin-bottom: 3%">
         <div class="container col-lg-12" >
           <img src="${res[i].cImgUrl}" style="height: 150px; width: 100%;">

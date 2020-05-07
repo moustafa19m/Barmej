@@ -18,6 +18,7 @@ function rando() {
        res = res.data;
        $("#courseHolder").empty();
   		 for(let i = 0; i < res.length; i++) {
+  			console.log(res[i].cImgUrl);
   			 $("#courseHolder").append(`<div class="row" style="background-color: #ededed; margin-bottom: 3%" >
               <div class="col-lg-4" >
                 <img src="${res[i].cImgUrl}" alt="" style="height: 150px; width: 100%;">
