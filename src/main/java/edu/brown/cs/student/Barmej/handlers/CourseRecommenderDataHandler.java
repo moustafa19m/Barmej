@@ -53,7 +53,7 @@ class CourseRecommenderDataHandler implements Route {
             item.addProperty("advanced", course.getAdvancedRating());
             item.addProperty("theoretical", course.getTheoreticalRating());
             item.addProperty("practical", course.getPracticalRating());
-            item.addProperty("problem-solving", course.getProblemRating());
+            item.addProperty("problem_solving", course.getProblemRating());
             array.add(item);
           }
           json.add("data", array);
