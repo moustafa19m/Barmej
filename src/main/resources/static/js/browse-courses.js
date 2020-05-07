@@ -20,7 +20,7 @@ function rando() {
   		 for(let i = 0; i < res.length; i++) {
   			 $("#courseHolder").append(`<div class="row" style="background-color: #ededed; margin-bottom: 3%" >
               <div class="col-lg-4" >
-                <img src="${res[i].cImgUrl}" alt="" style="height: 200px;">
+                <img src="${res[i].cImgUrl}" alt="" style="height: 150px; width: 100%;">
               </div>
               <div class="col-lg-8">
                 <h3>${res[i].cTitle}</h3>

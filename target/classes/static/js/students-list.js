@@ -14,16 +14,21 @@ $(document).ready(function() {
 function getStudentList() {
     $.get(`/studentListData`, function(res) {
       res = JSON.parse(res);
-      console.log(res);
-      res = res.data;
-      for(let i = 0; i < res.length; i++) {
-        $("#listOfStudents").append(`<tr>
-          <th scope="row">${i+1}</th>
-          <td>${res[i].sID}</td>
-          <td>${res[i].sFirstName}</td>
-          <td>${res[i].sLastName}</td>
-        </tr>`);
+      console.log(res.status);
+      if (res.status == "success") {
+        res = res.data;
+        for(let i = 0; i < res.length; i++) {
+          $("#listOfStudents").append(`<tr>
+            <th scope="row">${i+1}</th>
+            <td>${res[i].sID}</td>
+            <td>${res[i].sFirstName}</td>
+            <td>${res[i].sLastName}</td>
+          </tr>`);
+        }
+      } else {
+        alert("Failed to connect");
       }
+
     });
 }
 

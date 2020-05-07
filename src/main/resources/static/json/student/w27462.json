@@ -29,7 +29,7 @@
          },
          "4":{
             "0":"Assignment 1",
-            "text1":"Now that you are ready, try this coding assignment to test your expertise on Week 1.",
+            "text1":"Now that you are ready, try this coding assignment to test your expertise on this weeks content.",
             "assignment":"/ide/w27462:1"
          }
       }
@@ -60,7 +60,7 @@
          },
          "4":{
             "0":"Assignment 2",
-            "text1":"Now that you are ready, try this coding assignment to test your expertise on Week 1.",
+            "text1":"Now that you are ready, try this coding assignment to test your expertise on this weeks content.",
             "assignment":"/ide/w27462:2"
          }
       }
@@ -69,7 +69,7 @@
       "title":"Intro to Web Apps",
       "week":"Week 3",
       "prev":"/student/w27462:2",
-      "nextWeek":"/rankCourse/w27462",
+      "nextWeek":"/student",
       "modules":{
          "1":{
             "0":"React",
@@ -91,7 +91,7 @@
          },
          "4":{
             "0":"Assignment 3",
-            "text1":"Now that you are ready, try this coding assignment to test your expertise on Week 1.",
+            "text1":"Now that you are ready, try this coding assignment to test your expertise on this weeks content.",
             "assignment":"/ide/w27462:3"
          }
       }

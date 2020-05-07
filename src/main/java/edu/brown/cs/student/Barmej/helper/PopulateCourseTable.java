@@ -43,11 +43,11 @@ public class PopulateCourseTable {
     }; // size = 6
 
     String[] url = {
-        "https://images.app.goo.gl/uS4QxfeJeqemiEC46",
-        "https://images.app.goo.gl/sUYx2qX652aVzF8q7",
-        "https://images.app.goo.gl/uDwq2jvvVqXJ5ChS6",
-        "https://images.app.goo.gl/uDwq2jvvVqXJ5ChS6",
-        "https://images.app.goo.gl/DTG86WFgxQaV8TsBA", "https://images.app.goo.gl/3hLf2YYgyk3BistG8"
+        "../images/ai.jpg",
+        "../images/html.png",
+        "../images/security.png",
+        "../images/database.png",
+        "../images/code.png", "../images/lastlogo.png"
     }; // size =6
 
     Database.makeTables();
