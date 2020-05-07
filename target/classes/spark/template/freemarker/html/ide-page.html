@@ -196,7 +196,8 @@
 
                 		jsObj = JSON.parse(json);
                     console.log(json);
-                    $("#probDesc").append("<h3>" + jsObj.title + "</h3>" + jsObj.text);
+                    $("#probDesc").append("<h3>" + jsObj[0].title + "</h3>" + jsObj[0].text);
+                    $("#backButton").text("Back to " + jsObj[0].week);
 
                 	})
                 });
@@ -296,8 +297,8 @@
 
             	    	 //console.log(response.run_status.output);
 
-            	    	 outputBox.append("json " + jsObj[0].test.output);
-            	    	 outputBox.append("realOutput " + response.run_status.output);
+            	    	 /* outputBox.append("json " + jsObj[0].test.output);
+            	    	 outputBox.append("realOutput " + response.run_status.output); */
             	    	 //jsonObj[0].test.output.toString() == response.run_status.output.toString()
             	    	 console.log(jsObj[0].test.output);
             	    	 console.log(response.run_status.output);
@@ -305,6 +306,7 @@
             	    	 if (jsObj[0].test.output.valueOf().trim() == response.run_status.output.toString().trim()) {
             	    		 console.log("kanza");
             	    	 const splitOutput = response.run_status.output.split("\n");
+            	    	 console.log("splitoutput" + splitOutput);
             	    	 outputBox.append(`<p id="status_detailss" style="color:green"></p>`);
             	    	 for (let i = 0; i < splitOutput.length; i++) {
             	    		 $("#status_detailss").append(splitOutput[i]);
@@ -337,13 +339,13 @@
             <!-- <button href="#" class="btn btn-lg btn-success">Run Tests</button> -->
            <a id="submit" onclick="compileCode()" href="#"
 					class="btn btn-fwd" style="float: right; color: white">Run
-					Tests</a> <a href="/student/${problemID}"
-					class="btn btn-back" style="color: white">Back to Week 1</a> <br>
+					Tests</a> <a id="backButton" href="/student/${problemID}"
+					class="btn btn-back" style="color: white"></a> <br>
             <br>
             <div class=" rounded-sm" style="border: 6px solid #ededed;
 border-radius: 7px;" >
 
-              <div class="" style="height: 25vh">
+              <div id="output" class="" style="height: 25vh">
                 <h6 style="color: grey">Output...</h6>
               </div>
 

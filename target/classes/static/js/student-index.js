@@ -23,12 +23,6 @@ function getEnrolledCourses() {
                       <a class="img col-lg-5 btn-sm btn-primary" href="/student/${res[i].cID}:1">Go to Course</a>
                     </div>
                     <br>
-                    <div class="progress" style="height:15px">
-  <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" aria-valuenow="70"
-  aria-valuemin="0" aria-valuemax="100" style="width:70%">
-    <span class="sr-only">70% Complete</span>
-  </div>
-</div>
 <br>
                   </div>
                 </div>

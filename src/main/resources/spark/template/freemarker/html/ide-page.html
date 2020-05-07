@@ -197,7 +197,7 @@
                 		jsObj = JSON.parse(json);
                     console.log(json);
                     $("#probDesc").append("<h3>" + jsObj[0].title + "</h3>" + jsObj[0].text);
-                    $("#backButton").text("Back to " + jsObj.week);
+                    $("#backButton").text("Back to " + jsObj[0].week);
 
                 	})
                 });
