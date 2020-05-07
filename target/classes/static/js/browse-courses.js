@@ -30,6 +30,7 @@ function rando() {
                   <a class="btn btn-primary btn-sm" style="margin-right: 5%; color: white"> 10th-11Grade</a>
                   <a class="btn btn-primary btn-sm" style="margin-right: 5%; color: white"> Design</a>
                   <p>As a graduate student from Stanford university, Stever has received a lot of  Diam volutpat commodo sed egestas egestas. Maecenas pharetra convallis posuere morbi. Bibendum enim facilisis gravida neque convallis a cras semper.</p>
+                  <p>Math: ${res[i].math}  Creativity: ${res[i].creative}  Advanced: ${res[i].advanced} Theoretical: ${res[i].theoretical} Practical: ${res[i].practical} Problem-Solving: ${res[i].problem_solving}</p>
                   <a class="btn btn-info btn-sm" style="margin-right: 5%; color: white" href="/course/${res[i].cID}"> Learn More</a>
                 </div>
               </div>
