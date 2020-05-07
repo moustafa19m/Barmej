@@ -13,10 +13,20 @@ import java.util.UUID;
 import edu.brown.cs.student.Barmej.course.Course;
 import edu.brown.cs.student.Barmej.databases.Database;
 
+/**
+ * A class to populate the course table in the database with dummy courses for
+ * the recommender algorithm.
+ */
 public class PopulateCourseTable {
 
   private static Connection conn = Database.getConn();
 
+  /**
+   * A method to add courses to the database.
+   *
+   * @throws SQLException - when something goes wrong with/in accessing the
+   *                      database
+   */
   public static void addCoursesToDB() throws SQLException {
 
     String[] level = {
@@ -61,6 +71,7 @@ public class PopulateCourseTable {
       if (i == 0) {
         prep.setString(1, "1");
         prep.setString(2, "Introduction to Data Science");
+        prep.setInt(4, 1);
         prep.setString(7, url[0]);
         prep.setInt(8, 90);
         prep.setDouble(9, 1.0);
@@ -72,6 +83,7 @@ public class PopulateCourseTable {
       } else if (i == 1) {
         prep.setString(1, "2");
         prep.setString(2, "Introduction to Software Engineering");
+        prep.setInt(4, 3);
         prep.setString(7, url[1]);
         prep.setInt(8, 150);
         prep.setDouble(9, 3.0);
@@ -88,6 +100,7 @@ public class PopulateCourseTable {
         }
 
         prep.setString(2, name);
+        prep.setInt(4, iLevel);
         prep.setString(7, url[(int) (Math.random() * 6)]);
         prep.setInt(8, (int) (Math.random() * 200 + 50));
         int math = ((iSkill < 3) ? 5 : (int) (Math.random() * 5));
@@ -101,8 +114,6 @@ public class PopulateCourseTable {
 
       // num modules
       prep.setInt(3, (int) (Math.random() * 8));
-      // difficulty
-      prep.setInt(4, iLevel);
       // coding language
       prep.setString(5, randSkill.trim());
       // cost

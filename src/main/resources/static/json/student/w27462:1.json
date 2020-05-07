@@ -1,4 +1,4 @@
-
+[
 	{
 		"title": "Arrays and Loops in Scala",
 		"week": "Week 1",
@@ -8,3 +8,4 @@
 			"output": "All array elements: 10 20 30 40 50 \nSum of all array elements: 150"
 		}
 	}
+]
