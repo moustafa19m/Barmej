@@ -160,7 +160,6 @@ public class Course implements Coordinates {
     PreparedStatement prep;
 
     try {
-      Connection conn = Database.getConn();
       prep = conn.prepareStatement("SELECT math from course where id = ?");
       prep.setString(1, id);
 
