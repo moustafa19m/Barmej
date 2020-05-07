@@ -1,0 +1,153 @@
+<!doctype html>
+  <html>
+    <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <!-- <link rel="stylesheet" href="../../../../static/css/index.css">
+      <link rel="stylesheet" href="../../../../static/css/search.css"> -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="../js/enrolled-students.js"></script>
+      <link  rel="stylesheet" href="../css/index.css">
+    </head>
+
+    <body>
+
+
+      <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #0081ba;">
+        <div class="container">
+          <a href="#" class="navbar-brand"><img  src="../images/barmej-icon.png"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" >
+              <li class="nav-item ">
+                <a class="nav-link" href="/admin/${cID}" >Course Details </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Enroll Students<span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+              <a class="btn btn-light" href="/logOut">Sign Out</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="filler" style="height: 4vh; width 100wh;">
+
+        </div>
+        <div class="float-right">
+          <!-- invite button -->
+          <button class="btn btn-success btn-lg " type="button" data-toggle="modal" data-target="#exampleModal">Enroll Student</button>
+
+          <!-- invite form -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Enroll Student</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div >
+                  <div class="container">
+                    <table class=" table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col"></th>
+                          <th id="name" scope="col"></th>
+                          <th id="add" scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody id="allStudentsList">
+                     <!--    <tr>
+                          <th scope="row">1</th>
+                          <td>John Smith</td>
+                          <td>Sales</td>
+                          <td><a class="btn btn-success" href="./student-transcript">enroll</a></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>John Smith</td>
+                          <td>Sales</td>
+                          <td><a class="btn btn-success" href="./student-transcript">enroll</a></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>John Smith</td>
+                          <td>Sales</td>
+                          <td><a class="btn btn-success" href="./student-transcript">enroll</a></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">4</th>
+                          <td>John Smith</td>
+                          <td>Sales</td>
+                          <td><a class="btn btn-success" href="./student-transcript">enroll</a></td>
+                        </tr>  -->
+                      </tbody>
+                    </table>
+
+                  </div>
+
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <table class=" table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Student ID</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+            </tr>
+          </thead>
+          <tbody id="enrolled">
+            <!-- <tr>
+              <th scope="row">1</th>
+              <td>w352074345</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>Sales</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>w352074345</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>Sales</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>w352074345</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>Sales</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>w352074345</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>Sales</td>
+            </tr> -->
+          </tbody>
+        </table>
+        <text id="cID" hidden>${cID}</text>
+
+      </div>
+
+    </body>
+  </html>

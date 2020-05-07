@@ -1,0 +1,10 @@
+
+	{
+		"title": "Arrays and Loops in Scala",
+		"week": "Week 1",
+		"text": "Using Scala, write a program that first creates an array consisting of the first five multiples of 10, and then sums all these multiples. In one line print 'All array elements: ' followed by a list of space-separated array elements. Append a whitespace to the end of this list, too. In another line, print out 'Sum of all array elements: ' followed by your computed sum!",
+		"test": {
+			"code": "This is the code the student should have typed in",
+			"output": "All array elements: 10 20 30 40 50 \nSum of all array elements: 150"
+		}
+	}

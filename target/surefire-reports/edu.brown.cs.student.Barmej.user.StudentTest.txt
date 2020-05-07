@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: edu.brown.cs.student.Barmej.user.StudentTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 12.629 s <<< FAILURE! - in edu.brown.cs.student.Barmej.user.StudentTest
+edu.brown.cs.student.Barmej.user.StudentTest.gettersTest  Time elapsed: 6.338 s  <<< ERROR!
+java.lang.NullPointerException
+	at edu.brown.cs.student.Barmej.user.StudentTest.gettersTest(StudentTest.java:109)
+
+edu.brown.cs.student.Barmej.user.StudentTest.getEnrolledInTest  Time elapsed: 6.274 s  <<< ERROR!
+java.lang.NullPointerException
+	at edu.brown.cs.student.Barmej.user.StudentTest.getEnrolledInTest(StudentTest.java:98)
+

@@ -1,0 +1,71 @@
+1) For the first week, the assignment is in SCALA. Its code (that gives the correct output) is:
+
+object ExampleArray1 {
+    
+	   def main(args: Array[String]) {
+	       
+	      var numbers = Array(10,20,30,40,50);
+	      var N:Int=0;
+	      
+	      //print all array elements
+	      print("All array elements: ");
+	      for ( N <- numbers ) {
+	         print(N + " ");
+	      }
+      
+      println();
+	      //calculating SUM of all elements
+	      var sum: Int=0;
+	      for ( N <- numbers ) {
+	         sum+=N;
+	      }      
+	      print("Sum of all array elements: "+sum);
+
+	   }
+	}
+
+
+
+
+2) For the second week, the assignment is in C. Its code (that gives the correct output) is:
+
+void printFibonacciNumbers(int n) 
+{ 
+    int f1 = 0, f2 = 1, i; 
+  
+    if (n < 1) 
+        return; 
+  
+    for (i = 1; i <= n; i++) 
+    { 
+        printf("%d ", f2); 
+        int next = f1 + f2; 
+        f1 = f2; 
+        f2 = next; 
+    } 
+} 
+  
+// Driver Code 
+int main() 
+{ 
+    printFibonacciNumbers(7); 
+    return 0; 
+}
+
+
+
+
+3) For the third week, the assignment is in PYTHON. Its code (that gives the correct output) is:
+
+# Python Program to find the area of triangle
+
+a = 5
+b = 6
+c = 7
+
+# calculate the semi-perimeter
+s = (a + b + c) / 2
+
+# calculate the area
+area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+print('The area of the triangle is %0.2f' %area)

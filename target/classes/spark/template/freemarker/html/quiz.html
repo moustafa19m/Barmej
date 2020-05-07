@@ -1,0 +1,258 @@
+<!doctype html>
+  <html>
+    <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <!-- <link rel="stylesheet" href="../css/index.css">
+      <link rel="stylesheet" href="../css/search.css"> -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="../js/quiz.js"></script>
+      <link  rel="stylesheet" href="../css/index.css">
+      <link  rel="stylesheet" href="../css/index.css">
+    </head>
+
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #0081ba;">
+        <div class="container">
+          <a href="#" class="navbar-brand"><img  src="../images/barmej-icon.png"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <div class="navbar-nav mr-auto" >
+            </div>
+            <div class="form-inline my-2 my-lg-0">
+              <a class="btn btn-light" href="/logOut">Sign Out</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="pb-2 mt-4 mb-2 border-bottom">
+          <h1 style="color: #166F41">Intro to Web Apps</h1>
+        </div>
+        <div class="row">
+          <div class="col-lg-3" >
+          <div class="text-center">
+                <img class="img col-lg-8" src="../images/tree.jpg" alt="">
+              </div>
+            <div class="dropdown" style="background-color: #ededed">
+              <a class="btn-secondary btn dropdown-item active" data-toggle="collapse" href="#collapseExample"  aria-expanded="true" aria-controls="collapseExample">
+                Week1
+              </a>
+              <div class="collapse show" id="collapseExample">
+                <div class="row">
+                  <div class="col-lg-2">
+                  </div>
+                  <div class="dropdown col-lg-10">
+                    <a class="dropdown-item active" href="#">HTML & CSS</a>
+                    <a class="dropdown-item " href="#">Javascript</a>
+                    <a class="dropdown-item" href="#">Node.js</a>
+                    <a class="dropdown-item" href="#">Socket.js</a>
+                  </div>
+                </div>
+              </div>
+
+
+              <a class="btn-secondary btn dropdown-item" data-toggle="collapse" href="#collapseExample2"  aria-expanded="false" aria-controls="collapseExample">
+                Week2
+              </a>
+              <div class="collapse collapsed" id="collapseExample2">
+                <div class="row">
+                  <div class="col-lg-2">
+                  </div>
+                  <div class="dropdown col-lg-10">
+                    <a class="dropdown-item" href="#">HTML & CSS</a>
+                    <a class="dropdown-item " href="#">Javascript</a>
+                    <a class="dropdown-item" href="#">Node.js</a>
+                    <a class="dropdown-item" href="#">Socket.js</a>
+                  </div>
+                </div>
+              </div>
+
+              <a class="btn-secondary btn dropdown-item" data-toggle="collapse" href="#collapseExample3"  aria-expanded="false" aria-controls="collapseExample">
+                Week3
+              </a>
+              <div class="collapse collapsed" id="collapseExample3">
+                <div class="row">
+                  <div class="col-lg-2">
+                  </div>
+                  <div class="dropdown col-lg-10">
+                    <a class="dropdown-item" href="#">HTML & CSS</a>
+                    <a class="dropdown-item " href="#">Javascript</a>
+                    <a class="dropdown-item" href="#">Node.js</a>
+                    <a class="dropdown-item" href="#">Socket.js</a>
+                  </div>
+                </div>
+              </div>
+
+              <a class="btn-secondary btn dropdown-item" data-toggle="collapse" href="#collapseExample4"  aria-expanded="false" aria-controls="collapseExample">
+                Week4
+              </a>
+              <div class="collapse collapsed" id="collapseExample4">
+                <div class="row">
+                  <div class="col-lg-2">
+                  </div>
+                  <div class="dropdown col-lg-10">
+                    <a class="dropdown-item" href="#">HTML & CSS</a>
+                    <a class="dropdown-item " href="#">Javascript</a>
+                    <a class="dropdown-item" href="#">Node.js</a>
+                    <a class="dropdown-item" href="#">Socket.js</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <h3 style="color: black">How much HTML do you know? </h3>
+            <div id="questionHolder" class="col-lg-12">
+            <br>
+            <p style="color: #5C6661"><strong>Q1) What does HTML stand for?</strong></p>
+
+             <div id="oneQuestion" class="col-lg-12">
+
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord">Hyperlinks and Text Markup Language </label>
+<br>
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord">Home Tool Markup Language </label>
+    <br>
+     <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord">Hyper Text Markup Language </label>
+    <br>
+    </div>
+    <br>
+
+                <p style="color: #5C6661"><strong>Q2) Who makes web standards?</strong></p>
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord">The World Wide Web Consortium </label>
+<br>
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord">Google </label>
+    <br>
+     <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord">Microsoft </label>
+    <br>
+    <br>
+
+                <p style="color: #5C6661"><strong>Q3) What is the correct HTML element for the largest heading?</strong></p>
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord"> h1 </label>
+<br>
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord"> h6 </label>
+    <br>
+     <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord"> heading </label>
+    <br>
+    <br>
+
+                <p style="color: #5C6661"><strong>Q4) What is the correct HTML element for a line break?</strong></p>
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord"> lb </label>
+<br>
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord"> break </label>
+    <br>
+     <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord"> br </label>
+    <br>
+    <br>
+
+                <p style="color: #5C6661"><strong>Q5) What is the correct HTML for defining important text?</strong></p>
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord"> b </label>
+<br>
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord"> important </label>
+    <br>
+     <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord">  strong </label>
+    <br>
+    <br>
+
+                <p style="color: #5C6661"><strong>Q6) What is the correct HTML for defining emphasized text?</strong></p>
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord"> i </label>
+<br>
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord"> italic </label>
+    <br>
+     <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord"> em </label>
+    <br>
+    <br>
+
+                <p style="color: #5C6661"><strong>Q7) Which character indicates an end tag?</strong></p>
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord"> > </label>
+<br>
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord"> ^ </label>
+    <br>
+     <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord"> / </label>
+    <br>
+    <br>
+
+                <p style="color: #5C6661"><strong>Q8) Which of these are all table elements?</strong></p>
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord"> table, head, tfoot </label>
+<br>
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord"> table tr td </label>
+    <br>
+     <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord"> table tr tt </label>
+    <br>
+    <br>
+
+                <p style="color: #5C6661"><strong>Q9) Inline elements are normally displayed without starting a new line:</strong></p>
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord">True </label>
+<br>
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord"> False </label>
+    <br>
+    <br>
+
+                <p style="color: #5C6661"><strong>Q10) An iframe is used to display a web page within a web page:</strong></p>
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord">There is no such thing as an iframe </label>
+<br>
+ <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord">True </label>
+    <br>
+     <input type="radio" name="neighInputType" value="neighCoord" id="neighCoord" required>
+    <label for="neighCoord">False </label>
+    <br>
+    <br>
+
+    <a href="#" id="submitButton" class="btn btn-success">Submit Quiz</a>
+    <a href="#" class="btn btn-danger">Save Progress for Later</a>
+    <br>
+    <br>
+
+
+    <div id="resultsHolder"></div>
+
+    <br>
+    <br>
+
+            <a href="./course-page.html" class="btn btn-sm btn-primary">Go back to Week 1</a>
+            <br>
+            <br>
+
+          </div>
+          </div>
+
+        </div>
+
+      </div>
+    </body>
+  </html>

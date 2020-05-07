@@ -1,0 +1,113 @@
+<!doctype html>
+  <html>
+    <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <!-- <link rel="stylesheet" href="../../../../static/css/index.css">
+      <link rel="stylesheet" href="../../../../static/css/search.css"> -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="../js/admin-index.js"></script>
+      <link  rel="stylesheet" href="../css/index.css">
+    </head>
+
+    <body>
+
+
+      <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #0081ba;">
+        <div class="container">
+          <a href="#" class="navbar-brand"><img  src="../images/barmej-icon.png"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" >
+              <li class="nav-item ">
+                <a class="nav-link" href="/browseCourses" >Course Recommender</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/studentList">Students</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/adminList">Admins</a>
+              </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+              <a class="btn btn-light" href="/logOut">Sign Out</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+      <div class="container">
+        <div class="container row">
+          <div class="container col-lg-4">
+            <div style="margin-top: 5%; margin-left:12%; border: 2px solid #A8A8A8; border-radius: 11px;">
+              <br>
+              <div class="text-center">
+                <img class="img col-lg-5" src="../images/business-icon.png" alt="">
+              </div>
+              <br>
+              <div class="conatiner col-lg-10">
+                <p><strong>Name:</strong> <text id="oName">${oName}</text></p>
+                <p><strong>Institution Type:</strong> <text id="oType"> ${oType}</text></p>
+                <p><strong>Institution Size:</strong> <text id="oSize">${oSize} </text></p>
+                <p><strong>Enrolled Students:</strong> <text id="oEnrolled">${oEnrolled} </text> </p>
+                <p><strong>Administrator:</strong> <text id="oAdmin">${oAdmin}<text></p>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-8">
+            <div class="pb-2 mt-4 mb-2 border-bottom">
+              <h1>Institutional Dashboard</h1>
+            </div>
+            <br>
+            <h3 style="color: grey">Purchased Courses</h3>
+            <div id="coursesHolder" class="row">
+
+              <!-- <div class="col-lg-6" style="margin-bottom: 3%">
+                <div class="container col-lg-12" >
+                  <img src="../images/background.png" style="height: 150px; width: 100%;">
+                  <br>
+                  <div class="container" style=" border: 2px solid #5a5a5d;
+  border-radius: 0px 0px 30px 30px;">
+                    <h5>Intro to Web Development</h5>
+                    <text><strong>Name:</strong> Brown University</text>
+                    <br>
+                    <text><strong>Institution Type:</strong> Educational</text>
+                    <br>
+                    <text><strong>Enrolled Students:</strong> 300</text>
+                    <br>
+                    <text><strong>Max num of students:</strong> 600</text>
+                    <br>
+                    <text><strong>Level:</strong> Advanced</text>
+                    <br>
+                    <text><strong>Date Purchased:</strong> 01/01/2001</text>
+                    <br>
+                    <br>
+                    <div class="text-center">
+                      <a class="col-lg-6 btn btn-primary" href="/sudent/courseID">View Course</a>
+                    </div>
+                    <br>
+                  </div>
+                </div>
+              </div> -->
+              <br>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </body>
+  </html>

@@ -1,0 +1,11 @@
+[
+	{
+		"title": "Fibonacci Numbers in C",
+		"week": "Week 2",
+		"text": "Using C, write a program that outputs, on the same line, a sequence of the first seven whitespace-separated numbers in the Fibonacci sequence.",
+		"test": {
+			"code": "This is the code the student should have typed in",
+			"output": "1 1 2 3 5 8 13"
+		}
+	}
+]

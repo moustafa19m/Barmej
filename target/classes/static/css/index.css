@@ -1,0 +1,78 @@
+
+
+.organization {
+  background-color: white;
+  color: #0081ba;
+}
+
+.organization:hover {
+  background-color: #0081ba;
+}
+
+.navbar-custom {
+	color: white;
+}
+
+.btn-back {
+	background-color: #CBCFCD;
+	color: white;
+}
+
+.btn-fwd {
+	background-color: #4A79B5;
+	color: white;
+	
+}
+
+.btn-assignment {
+	background-color: #3C9983;
+	color: white;
+}
+
+.btn-language {
+	background-color: #70B8E6;
+	color: black;
+}
+
+.findCButton {
+	background-color: #8199D0;
+	color: white;
+}
+
+.slidecontainer {
+  width: 90%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 90%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4E6FB8;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4E6FB8;
+  cursor: pointer;
+}
