@@ -191,7 +191,7 @@ public class Administrator extends User {
         System.out.println("sauce9999");
         return;
       }
-      if ((enrolled < max) && (!courses.contains(course))) {
+      if (enrolled < max) {
         prep = conn.prepareStatement("INSERT INTO enrolled_courses VALUES (?, ?, ?)");
         prep.setString(1, student.getId());
         prep.setString(2, course.getId());
