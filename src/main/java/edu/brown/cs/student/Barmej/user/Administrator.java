@@ -186,11 +186,12 @@ public class Administrator extends User {
     try {
       int max = course.getMaxStudents();
       int enrolled = course.getStudentsEnrolled();
+      Set<Course> courses = student.getEnrolledIn();
       if (enrolled < 0) {
         System.out.println("sauce9999");
         return;
       }
-      if (enrolled < max) {
+      if ((enrolled < max) && (!courses.contains(course))) {
         prep = conn.prepareStatement("INSERT INTO enrolled_courses VALUES (?, ?, ?)");
         prep.setString(1, student.getId());
         prep.setString(2, course.getId());
