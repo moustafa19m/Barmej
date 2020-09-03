@@ -1,5 +1,6 @@
 package edu.brown.cs.student.Barmej.handlers;
 
+import edu.brown.cs.student.Barmej.exceptions.UserPermissionException;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
 import java.util.ArrayList;
