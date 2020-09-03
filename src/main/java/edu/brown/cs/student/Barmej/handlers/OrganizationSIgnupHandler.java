@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+import edu.brown.cs.student.Barmej.user.User;
 import edu.brown.cs.student.Barmej.user.Institution;
 import spark.ModelAndView;
 import spark.QueryParamsMap;
@@ -57,6 +57,7 @@ class OrganizationSignupHandler implements TemplateViewRoute {
     Institution.institutionSignUp(institutionInput, adminInput);
     Map<String, String> variables = new HashMap<>();
     variables.put("Status", "Success");
-    return ParentHandler.handleGetRequest(req, "index.html", "index.html");
+    User.logIn(emailAddress, password);
+    return ParentHandler.handleGetRequest(req, "admin-signup.html", "index.html");
   }
 }
