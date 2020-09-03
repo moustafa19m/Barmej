@@ -1,16 +1,17 @@
 # cs0320 Term Project 2020
+Hello
 
 **Team Members:** _Fill this in!_
 
 **Team Strengths and Weaknesses:** _Fill this in!_
 
 **Project Idea(s):** _Fill this in with three unique ideas! (Due by March 2)_
-### Idea 1 
+### Idea 1
 Barmej: a platform that helps organizations and educational institutions provide computer science educational  materials to members within their organization. For more details about the project, please refer to 'Final Project Proposal.pdf' in the root directory.
 
 TA Approval: Approved, but clarify what the core algorithm is.
 
-**Note: ** You do not need to resubmit your idea for approval. Please remove the PDF from your repo and modify the README file with your changes. 
+**Note: ** You do not need to resubmit your idea for approval. Please remove the PDF from your repo and modify the README file with your changes.
 
 ### Idea 2
 
