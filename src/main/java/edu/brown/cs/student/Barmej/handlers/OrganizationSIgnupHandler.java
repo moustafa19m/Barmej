@@ -58,7 +58,7 @@ class OrganizationSignupHandler implements TemplateViewRoute {
     Institution.institutionSignUp(institutionInput, adminInput);
 
     Map<String, String> variables = new HashMap<>();
-    String id = User.findIdFromUsername(username);
+    String id = User.findIdFromUsername(emailAddress);
     Administrator admin = new Administrator(id);
     Institution institution = admin.getInstitution();
     variables.put("oName", institution.getName());
