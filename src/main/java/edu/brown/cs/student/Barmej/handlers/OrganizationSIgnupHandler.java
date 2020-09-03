@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import edu.brown.cs.student.Barmej.user.User;
+import edu.brown.cs.student.Barmej.user.Administrator;
 import edu.brown.cs.student.Barmej.user.Institution;
 import spark.ModelAndView;
 import spark.QueryParamsMap;
@@ -55,12 +56,27 @@ class OrganizationSignupHandler implements TemplateViewRoute {
     adminInput.add(lastName);
     adminInput.add(password);
     Institution.institutionSignUp(institutionInput, adminInput);
+
+    Map<String, String> variables = new HashMap<>();
+    String id = User.findIdFromUsername(username);
+    Administrator admin = new Administrator(id);
+    Institution institution = admin.getInstitution();
+    variables.put("oName", institution.getName());
+    variables.put("oSize", institution.getSize(admin).toString());
+    variables.put("oEnrolled", Integer.toString(institution.getNumEnrolled(admin)));
+    StringBuilder name = new StringBuilder(admin.getFirstName());
+    name.append(" ");
+    name.append(admin.getLastName());
+    variables.put("oAdmin", name.toString());
+    variables.put("oType", institution.getType());
+    variables.put("Status", "Success");
+
     List<String> userInput = new ArrayList<>();
     userInput.add(emailAddress);
     userInput.add(password);
     User.logIn(userInput);
-    Map<String, String> variables = new HashMap<>();
-    variables.put("Status", "Success");
-    return ParentHandler.handleGetRequest(req, "admin-signup.html", "index.html");
+
+    res.cookie("hash", Integer.toString(username.hashCode()));
+    return new ModelAndView(variables, "admin-index.html");
   }
 }
