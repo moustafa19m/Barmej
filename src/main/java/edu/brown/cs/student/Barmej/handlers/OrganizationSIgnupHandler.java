@@ -55,9 +55,12 @@ class OrganizationSignupHandler implements TemplateViewRoute {
     adminInput.add(lastName);
     adminInput.add(password);
     Institution.institutionSignUp(institutionInput, adminInput);
+    List<String> userInput = new ArrayList<>();
+    userInput.add(emailAddress);
+    userInput.add(password);
+    User.logIn(userInput);
     Map<String, String> variables = new HashMap<>();
     variables.put("Status", "Success");
-    User.logIn(emailAddress, password);
     return ParentHandler.handleGetRequest(req, "admin-signup.html", "index.html");
   }
 }
