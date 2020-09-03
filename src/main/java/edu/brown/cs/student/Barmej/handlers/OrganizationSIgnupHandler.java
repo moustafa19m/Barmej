@@ -22,7 +22,7 @@ import spark.TemplateViewRoute;
 class OrganizationSignupHandler implements TemplateViewRoute {
   @Override
   public ModelAndView handle(Request req, Response res)
-      throws NoSuchProviderException, NoSuchAlgorithmException {
+      throws NoSuchProviderException, NoSuchAlgorithmException, UserPermissionException {
     QueryParamsMap params = req.queryMap();
     String orgType = params.value("oType");
     String orgName = params.value("oName");
