@@ -76,7 +76,7 @@ class OrganizationSignupHandler implements TemplateViewRoute {
     userInput.add(password);
     User.logIn(userInput);
 
-    res.cookie("hash", Integer.toString(username.hashCode()));
+    res.cookie("hash", Integer.toString(emailAddress.hashCode()));
     return new ModelAndView(variables, "admin-index.html");
   }
 }
